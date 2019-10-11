@@ -1,0 +1,235 @@
+<view>
+	<Mytitle bind:mySearch="onMySearch" id="Tit" />
+	<!-- <button bindtap="onSubmit" type="primary">发送到数据库</button> -->
+
+	<!--导航-->
+	<view class="nav_wrap">
+		<scroll-view scroll-x class="scroll_container">
+			<view
+			 id="nav{{index}}"
+			 bindtap="activeNav"
+			 data-index="{{index}}"
+			 class="nav_item {{index===currentIndex?'active':''}}"
+			 wx:for="{{navList}}"
+			 wx:key="{{index}}"
+			>
+				{{item.text}}
+			</view>
+			<!-- 下划线 left & width值是动态赋值-->
+			<view class="line" style="left:{{lineLeft}}px;width:{{lineWidth}}px" />
+		</scroll-view>
+	</view>
+	<!--导航-->
+
+	<swiper
+	 class="tab"
+	 current="{{currentIndex}}"
+	 duration="300"
+	 bindchange="swiperTab"
+	>
+
+		<swiper-item>
+			<scroll-view scroll-y style="height: 100%;">
+
+				<!--轮播图-->
+				<view>
+					<swiper
+					 indicator-dots
+					 indicator-active-color="#fff"
+					 autoplay
+					 interval="5000"
+					 duration="600"
+					 circular
+					>
+						<swiper-item wx:for="{{imgUrls}}" wx:key="{{index}}">
+							<navigator url="" redirect hover-class="className">
+								<image src="{{item.imgUrl}}" mode="widthFix" />
+							</navigator>
+						</swiper-item>
+					</swiper>
+				</view>
+				<!--轮播图-->
+
+				<view wx:if="{{tip}}" class="tip">
+					<text>*_* 找不到资源</text>
+				</view>
+
+				<!--视频列表-->
+
+				<view class="video_wrap">
+
+					<block wx:for="{{videosList}}" wx:key="{{index}}">
+						<navigator class="video_item" url="../detail/detail?id={{item.data.id}}">
+							<!--图片-->
+							<view class="imgOuter">
+								<!--图片头-->
+								<image src="{{item.data.imgSrc}}" mode="widthFix" />
+								<!--播放量-->
+								<view class="imgInfo">
+									<view class="imgInfoLeft" />
+									<view class="imgInfoRight" />
+								</view>
+							</view>
+							<!--标题-->
+							<view class="videoTitle">{{item.data.desc}}</view>
+						</navigator>
+					</block>
+
+				</view>
+				<!--视频列表-->
+
+			</scroll-view>
+		</swiper-item>
+
+
+
+
+    <swiper-item>
+			<scroll-view scroll-y style="height: 100%;">
+
+				<view wx:if="{{tip}}" class="tip">
+					<text>*_* 找不到资源</text>
+				</view>
+
+				<!--视频列表-->
+
+				<view class="video_wrap">
+
+					<block wx:for="{{videosList}}" wx:key="{{index}}">
+						<navigator class="video_item" url="../detail/detail?id={{item.data.id}}">
+							<!--图片-->
+							<view class="imgOuter">
+								<!--图片头-->
+								<image src="{{item.data.imgSrc}}" mode="widthFix" />
+								<!--播放量-->
+								<view class="imgInfo">
+									<view class="imgInfoLeft" />
+									<view class="imgInfoRight" />
+								</view>
+							</view>
+							<!--标题-->
+							<view class="videoTitle">{{item.data.desc}}</view>
+						</navigator>
+					</block>
+
+				</view>
+				<!--视频列表-->
+
+			</scroll-view>
+		</swiper-item>
+
+
+
+    <swiper-item>
+			<scroll-view scroll-y style="height: 100%;">
+
+
+				<view wx:if="{{tip}}" class="tip">
+					<text>*_* 找不到资源</text>
+				</view>
+
+				<!--视频列表-->
+
+				<view class="video_wrap">
+
+					<block wx:for="{{videosList}}" wx:key="{{index}}">
+						<navigator class="video_item" url="../detail/detail?id={{item.data.id}}">
+							<!--图片-->
+							<view class="imgOuter">
+								<!--图片头-->
+								<image src="{{item.data.imgSrc}}" mode="widthFix" />
+								<!--播放量-->
+								<view class="imgInfo">
+									<view class="imgInfoLeft" />
+									<view class="imgInfoRight" />
+								</view>
+							</view>
+							<!--标题-->
+							<view class="videoTitle">{{item.data.desc}}</view>
+						</navigator>
+					</block>
+
+				</view>
+				<!--视频列表-->
+
+			</scroll-view>
+		</swiper-item>
+
+
+
+    <swiper-item>
+			<scroll-view scroll-y style="height: 100%;">
+
+
+				<view wx:if="{{tip}}" class="tip">
+					<text>*_* 找不到资源</text>
+				</view>
+
+				<!--视频列表-->
+
+				<view class="video_wrap">
+
+					<block wx:for="{{videosList}}" wx:key="{{index}}">
+						<navigator class="video_item" url="../detail/detail?id={{item.data.id}}">
+							<!--图片-->
+							<view class="imgOuter">
+								<!--图片头-->
+								<image src="{{item.data.imgSrc}}" mode="widthFix" />
+								<!--播放量-->
+								<view class="imgInfo">
+									<view class="imgInfoLeft" />
+									<view class="imgInfoRight" />
+								</view>
+							</view>
+							<!--标题-->
+							<view class="videoTitle">{{item.data.desc}}</view>
+						</navigator>
+					</block>
+
+				</view>
+				<!--视频列表-->
+
+			</scroll-view>
+		</swiper-item>
+
+
+
+
+    <swiper-item>
+			<scroll-view scroll-y style="height: 100%;">
+
+				<view wx:if="{{tip}}" class="tip">
+					<text>*_* 找不到资源</text>
+				</view>
+
+				<!--视频列表-->
+
+				<view class="video_wrap">
+
+					<block wx:for="{{videosList}}" wx:key="{{index}}">
+						<navigator class="video_item" url="../detail/detail?id={{item.data.id}}">
+							<!--图片-->
+							<view class="imgOuter">
+								<!--图片头-->
+								<image src="{{item.data.imgSrc}}" mode="widthFix" />
+								<!--播放量-->
+								<view class="imgInfo">
+									<view class="imgInfoLeft" />
+									<view class="imgInfoRight" />
+								</view>
+							</view>
+							<!--标题-->
+							<view class="videoTitle">{{item.data.desc}}</view>
+						</navigator>
+					</block>
+
+				</view>
+				<!--视频列表-->
+
+			</scroll-view>
+		</swiper-item>
+
+	</swiper>
+
+</view>
+

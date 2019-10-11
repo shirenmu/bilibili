@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "Mytitle":"../../components/Mytitle/Mytitle"
+  },
+  
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "哔哩哔哩",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  
+}

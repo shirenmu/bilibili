@@ -1,0 +1,77 @@
+<view class="main">
+	<Mytitle bind:mySearch="onMySearch" id="Tit" />
+
+	<!--视频详情    start   -->
+
+	<view class="video_info">
+		<video src="{{videoInfo.videoSrc}}" enable-danmu danmu-btn controls enable-play-gesture title="暗物质"/>
+	</view>
+	<!--标题-->
+  <view class="video_title">
+    <text>{{videoInfo.videoTitle}}</text>
+    <van-icon name="arrow-down" />
+  </view>
+	<!--更多-->
+  <view class="video_more">
+    <!--作者-->
+    <text class="author">{{videoInfo.author}}</text>
+    <!--播放量-->
+    <text class="play_count">{{videoInfo.playCount}}次观看</text>
+    <!--评论量-->
+    <text class="comment_count">{{videoInfo.commentCount}}条弹幕</text>
+    <!--时间-->
+    <text class="date">{{videoInfo.date}}</text>
+  </view>
+	<!--视频详情    end   -->
+
+
+
+
+	<!--评论  start   -->
+  <view class="comment_wrap">
+    <view class="comment_tit">评论({{commentData.commentTotalCount}})</view>
+    
+    <view class="comment_list">
+      <view class="comment_item" wx:for="{{commentData.commentList}}" wx:key="{{index}}">
+        <view class="comment_user">
+          <image src="{{item.userIconSrc}}" mode="widthFix" />
+        </view>
+        <view class="comment_info">
+          <view class="comment_detail">
+            <text class="author">{{item.username}}</text>
+            <text class="date">{{item.commentDate}}</text>
+          </view>
+          <view class="comment_content">
+            {{item.commentInfo}}
+          </view>
+          
+        </view>
+      </view>
+    </view>
+    
+  </view>
+	<!--评论  end   -->
+
+
+
+
+
+  <!--视频推荐    start   -->
+  <view class="other_list">
+    <navigator wx:for="{{othersList}}" wx:key="{{index}}" class="other_item">
+      <view class="other_img">
+        <image src="{{item.imgSrc}}" mode="widthFix" />
+      </view>
+      <view class="other_info">
+        <view class="other_tit">{{item.title}}</view>
+        <view class="other_detail">
+          <text>{{item.playMsg}}次观看</text>
+          <text>{{item.commentCount}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <!--视频推荐    end   -->
+
+</view>
+

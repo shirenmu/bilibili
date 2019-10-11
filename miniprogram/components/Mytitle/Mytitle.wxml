@@ -1,0 +1,36 @@
+<view>
+
+	<view class="my-title" hidden="{{!titStatus}}">
+		<!-- logo -->
+		<view class="logo">
+			<image src="../../icon/logo2.png" />
+		</view>
+		<!-- 搜索 -->
+		<view class="search" bindtap="search">
+
+             <icon type="search" size="20"/>
+
+		</view>
+		<!-- 用户 -->
+		<view class="user">
+			<image src="../../icon/user.png" />
+		</view>
+		<!-- 下载按钮 -->
+		<view class="download">
+			下载 App
+		</view>
+
+	</view>
+
+	<view hidden="{{titStatus}}" class="searchInput">
+		<van-search
+		 value="{{ value }}"
+		 placeholder="请输入搜索关键词"
+		 show-action
+		 bind:search="onSearch"
+		 bind:cancel="onCancel"
+		/>
+	</view>
+
+</view>
+
