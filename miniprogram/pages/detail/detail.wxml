@@ -1,5 +1,19 @@
 <view class="main">
-	<Mytitle bind:mySearch="onMySearch" id="Tit" />
+	<view class="my-title">
+		<!-- logo -->
+		<view class="logo">
+			<image src="../../icon/logo2.png" />
+		</view>
+		<!-- 用户 -->
+		<view class="user">
+			<image src="../../icon/user.png" />
+		</view>
+		<!-- 下载按钮 -->
+		<view class="download">
+			下载 App
+		</view>
+
+	</view>
 
 	<!--视频详情    start   -->
 
@@ -66,7 +80,7 @@
         <view class="other_tit">{{item.title}}</view>
         <view class="other_detail">
           <text>{{item.playMsg}}次观看</text>
-          <text>{{item.commentCount}}</text>
+          <text>{{item.commentCount}}条评论</text>
         </view>
       </view>
     </navigator>

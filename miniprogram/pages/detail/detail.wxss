@@ -11,13 +11,18 @@
   color:#de688b;
 }
 
+.date{
+  color: #de688b;
+  margin-left: 60rpx;
+}
+
 .video_more{
-  width: 70%;
+  width: 66%;
   display: flex;
   justify-content: space-between;
   color:#666;
   font-size: 20rpx;
-  margin-left: 20rpx;
+  margin-left: 40rpx;
   height: 60rpx;
   line-height: 60rpx;
 }
@@ -76,6 +81,10 @@
   flex-wrap: wrap;
 }
 
+.other_detail text{
+  margin-right: 30rpx;
+}
+
 
 /* 评论列表 start*/
 .comment_wrap{
@@ -83,6 +92,7 @@
 }
 .comment_tit{
   padding:20rpx;
+  padding-left:40rpx;
   font-size: 28rpx;
 }
 
@@ -90,11 +100,12 @@
   padding: 20rpx 40rpx;
 }
 .comment_item{
-  margin-bottom: 10rpx;
+  margin-bottom: 20rpx;
   padding:10rpx;
+  padding-bottom: 40rpx;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgb(228, 228, 228);
+  border-bottom: 1px solid rgb(231, 231, 231);
 }
 .comment_user{
   flex:1;
@@ -130,9 +141,56 @@
 }
 
 .comment_content{
-  margin-top: 10rpx;
+  margin-top: 20rpx;
   font-size: 24rpx;
 }
 
 /* 评论列表 end*/
+
+
+
+
+.my-title {
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  padding: 10rpx 20rpx;
+  justify-content: center;
+  background: #fff;
+}
+
+.logo {
+  flex: 7;
+}
+
+.logo image {
+  width: 140rpx;
+  height: 60rpx;
+}
+
+
+
+.user {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user image {
+  width: 54rpx;
+  height: 60rpx;
+}
+
+.download {
+  flex: 3;
+  color: #fff;
+  background: pink;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx;
+}
 
